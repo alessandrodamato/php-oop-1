@@ -6,3 +6,8 @@ body{
 li{
   list-style: none;
 }
+
+header, footer{
+  height: 70px;
+  background-color: #f2f2f2;
+}
