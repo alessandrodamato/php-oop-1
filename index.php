@@ -18,149 +18,31 @@ require_once __DIR__ . '/partials/head.php';
 
       <div class="row">
 
+        <?php foreach($movies as $movie): ?>
         <div class="col-4 d-flex justify-content-center">
 
           <div class="card mb-5" style="width: 18rem;">
-            <img src="<?php echo $matrix->path ?>" class="card-img-top" alt="<?php echo $matrix->title ?>">
+            <img src="<?php echo $movie->path ?>" class="card-img-top" alt="<?php echo $movie->title ?>">
             <div class="card-body">
-              <h5 class="card-title"><?php $matrix->joinNameYear() ?></h5>
-              <p class="card-text"><?php echo $matrix->description ?></p>
+              <h5 class="card-title"><?php $movie->joinNameYear() ?></h5>
+              <p class="card-text"><?php echo $movie->description ?></p>
             </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item fw-bold ">Generi:</li>
-              <?php foreach($matrix->genres as $genre): ?>
+              <?php foreach($movie->genres as $genre): ?>
                 <li class="list-group-item"><?php echo $genre ?></li>
               <?php endforeach ?>
             </ul>
             <ul class="list-group list-group-flush">
               <li class="list-group-item fw-bold ">Attori:</li>
-              <?php foreach($matrix->actors as $actor): ?>
+              <?php foreach($movie->actors as $actor): ?>
                 <li class="list-group-item"><?php echo $actor ?></li>
               <?php endforeach ?>
             </ul>
           </div>
 
         </div>
-
-        <div class="col-4 d-flex justify-content-center">
-
-          <div class="card mb-5" style="width: 18rem;">
-          <img src="<?php echo $oppenheimer->path ?>" class="card-img-top" alt="<?php echo $oppenheimer->title ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php $oppenheimer->joinNameYear() ?></h5>
-              <p class="card-text"><?php echo $oppenheimer->description ?></p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Generi:</li>
-              <?php foreach($oppenheimer->genres as $genre): ?>
-                <li class="list-group-item"><?php echo $genre ?></li>
-              <?php endforeach ?>
-            </ul>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Attori:</li>
-              <?php foreach($oppenheimer->actors as $actor): ?>
-                <li class="list-group-item"><?php echo $actor ?></li>
-              <?php endforeach ?>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="col-4 d-flex justify-content-center">
-
-          <div class="card mb-5" style="width: 18rem;">
-          <img src="<?php echo $scarface->path ?>" class="card-img-top" alt="<?php echo $scarface->title ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php $scarface->joinNameYear() ?></h5>
-              <p class="card-text"><?php echo $scarface->description ?></p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Generi:</li>
-              <?php foreach($scarface->genres as $genre): ?>
-                <li class="list-group-item"><?php echo $genre ?></li>
-              <?php endforeach ?>
-            </ul>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Attori:</li>
-              <?php foreach($scarface->actors as $actor): ?>
-                <li class="list-group-item"><?php echo $actor ?></li>
-              <?php endforeach ?>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="col-4 d-flex justify-content-center">
-
-          <div class="card mb-5" style="width: 18rem;">
-          <img src="<?php echo $casino->path ?>" class="card-img-top" alt="<?php echo $casino->title ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php $casino->joinNameYear() ?></h5>
-              <p class="card-text"><?php echo $casino->description ?></p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Generi:</li>
-              <?php foreach($casino->genres as $genre): ?>
-                <li class="list-group-item"><?php echo $genre ?></li>
-              <?php endforeach ?>
-            </ul>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Attori:</li>
-              <?php foreach($casino->actors as $actor): ?>
-                <li class="list-group-item"><?php echo $actor ?></li>
-              <?php endforeach ?>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="col-4 d-flex justify-content-center">
-
-          <div class="card mb-5" style="width: 18rem;">
-          <img src="<?php echo $avatar2->path ?>" class="card-img-top" alt="<?php echo $avatar2->title ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php $avatar2->joinNameYear() ?></h5>
-              <p class="card-text"><?php echo $avatar2->description ?></p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Generi:</li>
-              <?php foreach($avatar2->genres as $genre): ?>
-                <li class="list-group-item"><?php echo $genre ?></li>
-              <?php endforeach ?>
-            </ul>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Attori:</li>
-              <?php foreach($avatar2->actors as $actor): ?>
-                <li class="list-group-item"><?php echo $actor ?></li>
-              <?php endforeach ?>
-            </ul>
-          </div>
-
-        </div>
-
-        <div class="col-4 d-flex justify-content-center">
-
-          <div class="card mb-5" style="width: 18rem;">
-          <img src="<?php echo $jumanji->path ?>" class="card-img-top" alt="<?php echo $jumanji->title ?>">
-            <div class="card-body">
-              <h5 class="card-title"><?php $jumanji->joinNameYear() ?></h5>
-              <p class="card-text"><?php echo $jumanji->description ?></p>
-            </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Generi:</li>
-              <?php foreach($jumanji->genres as $genre): ?>
-                <li class="list-group-item"><?php echo $genre ?></li>
-              <?php endforeach ?>
-            </ul>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item fw-bold ">Attori:</li>
-              <?php foreach($jumanji->actors as $actor): ?>
-                <li class="list-group-item"><?php echo $actor ?></li>
-              <?php endforeach ?>
-            </ul>
-          </div>
-
-        </div>
+        <?php endforeach ?>
 
       </div>
 
